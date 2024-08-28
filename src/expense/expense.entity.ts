@@ -9,8 +9,8 @@ export class Expense {
   title: string;
 
   @Column('decimal')
-  amount: number;
+  montant: number;
 
-  @Column('date')
+  @Column({ type: 'date', nullable: true })
   date: string;
 }

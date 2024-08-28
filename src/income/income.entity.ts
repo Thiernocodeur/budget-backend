@@ -5,12 +5,12 @@ export class Income {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ name: 'titre' })  // Assure-toi que le nom de la colonne est correct
+  @Column()
   titre: string;
 
-  @Column('decimal')
-  amount: number;
+  @Column()
+  montant: number;
 
-  @Column('date')
-  date: string;
+  @Column()
+  date: string; // Utilisez le type Date si vous travaillez avec des objets Date
 }

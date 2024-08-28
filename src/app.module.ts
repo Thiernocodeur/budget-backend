@@ -22,7 +22,8 @@ import { BudgetSummaryModule } from './budget-summary/budget-summary.module'; //
         username: configService.get('DB_USERNAME'),
         password: configService.get('DB_PASSWORD'),
         database: configService.get('DB_DATABASE'),
-        entities: [path.join(process.cwd(), 'dist/**/*.entity.js')],
+        entities: [path.join(__dirname, '**/*.entity.{js,ts}')],
+
         synchronize: true,
       }),
       inject: [ConfigService],

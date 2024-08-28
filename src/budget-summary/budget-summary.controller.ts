@@ -14,8 +14,8 @@ export class BudgetSummaryController {
     const incomes = await this.incomeService.findAll();
     const expenses = await this.expenseService.findAll();
 
-    const totalIncome = incomes.reduce((acc, income) => acc + income.amount, 0);
-    const totalExpense = expenses.reduce((acc, expense) => acc + expense.amount, 0);
+    const totalIncome = incomes.reduce((acc, income) => acc + income.montant, 0);
+    const totalExpense = expenses.reduce((acc, expense) => acc + expense.montant, 0);
     const remainingBudget = totalIncome - totalExpense;
 
     return {

@@ -5,10 +5,8 @@ import { IncomeService } from './income.service';
 import { IncomeController } from './income.controller';
 
 @Module({
-    imports: [TypeOrmModule.forFeature([Income])],
-    providers: [IncomeService],
-    controllers: [IncomeController],
-    exports: [IncomeService], // Assurez-vous que IncomeService est exporté
-  })
-  export class IncomeModule {}
-  
+  imports: [TypeOrmModule.forFeature([Income])],
+  controllers: [IncomeController],
+  providers: [IncomeService],
+})
+export class IncomeModule {}

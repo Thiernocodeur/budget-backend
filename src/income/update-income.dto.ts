@@ -7,7 +7,7 @@ export class UpdateIncomeDto {
 
   @IsOptional()
   @IsNumber()
-  readonly amount?: number;
+  readonly montant?: number;
 
   @IsOptional()
   @IsDateString()
