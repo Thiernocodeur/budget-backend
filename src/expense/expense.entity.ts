@@ -1,16 +1,17 @@
+// src/expense/expense.entity.ts
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
+@Entity('expense')
 export class Expense {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
-  title: string;
+  @Column({ name: 'titre' })  // Utilisez 'titre' pour correspondre à la base de données
+  titre: string;
 
-  @Column('decimal')
+  @Column({ name: 'montant', type: 'float' })
   montant: number;
 
-  @Column({ type: 'date', nullable: true })
+  @Column({ name: 'date' })
   date: string;
 }

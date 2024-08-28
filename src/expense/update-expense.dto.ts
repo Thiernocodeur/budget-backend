@@ -1,17 +1,17 @@
+// src/expense/dto/update-expense.dto.ts
 import { IsNumber, IsOptional, IsString, IsDateString, Min } from 'class-validator';
 
 export class UpdateExpenseDto {
   @IsOptional()
   @IsString()
-    // Exemple de validation de longueur
-  readonly title?: string;
+  readonly titre?: string;  // Utilisez 'titre'
 
   @IsOptional()
   @IsNumber()
-  @Min(0)  // Exemple de validation pour s'assurer que le montant est positif
+  @Min(0)
   readonly montant?: number;
 
   @IsOptional()
   @IsDateString()
-  readonly date?: string;  // Si vous souhaitez également mettre à jour la date
+  readonly date?: string;
 }
